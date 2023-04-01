@@ -5,24 +5,18 @@ const Form = () => {
     const [inputName, setName] = useState("")
     const [inputEmail, setEmail] = useState("")
     const [error, setError] = useState(false)
-    let isSubmit = false
+    const [submit, setSubmit] = useState(false)
+    const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
     function handleSubmit(event){
         event.preventDefault();
-        setError(false);
-        isSubmit = true
-        console.log("inputName: " + inputName);
-
-        if(inputName.length < 5){
-          console.log("error")
-          setError(true)
+        if((inputName.length < 5) || !validEmail.test(inputEmail)){
+            setError(true);
+            setSubmit(false);
+            return;
         }
-        // if(inputName.trim().length > 0 || inputName.trim()[0] === " " || inputName.trim().length <= 5) {
-        //     setError(true)
-        //     console.log("if", error, isSubmit)
-        //     console.log(inputName.length)
-        //     return;
-        // }
+        setError(false);
+        setSubmit(true);
       
     }
 
@@ -41,12 +35,12 @@ const Form = () => {
         <label>Name:</label>
         <input type="text"  onChange={handleOnChangeName} value={inputName}/>
         <label>Email:</label>
-        <input type="email" onChange={handleOnChangeEmail} value={inputEmail}/>
+        <input type="text" onChange={handleOnChangeEmail} value={inputEmail}/>
         <button type="submit">Send</button>
        
       </form>
       {error ? <p>Please check your information again</p>: undefined}  
-      {(error ===false && isSubmit) ? <p>{`Thank you ${inputName} We will contact you as soon as possible via email`}</p>: undefined}        
+      {(!error && submit) ? <p>{`Thank you ${inputName} We will contact you as soon as possible via email`}</p>: undefined}    
     </div>
   );
 };
