@@ -9,16 +9,21 @@ const Form = () => {
 
     function handleSubmit(event){
         event.preventDefault();
+        setError(false);
         isSubmit = true
-        if(inputName.trim().length > 0 || inputName.trim()[0] === " " || inputName.trim().length <= 5) {
-            setError(true)
-            console.log("if", error, isSubmit)
-            console.log(inputName.length)
-            return;
+        console.log("inputName: " + inputName);
+
+        if(inputName.length < 5){
+          console.log("error")
+          setError(true)
         }
-        setError(false)
-        console.log("else", error, isSubmit)
-        console.log(inputName.length)
+        // if(inputName.trim().length > 0 || inputName.trim()[0] === " " || inputName.trim().length <= 5) {
+        //     setError(true)
+        //     console.log("if", error, isSubmit)
+        //     console.log(inputName.length)
+        //     return;
+        // }
+      
     }
 
     function handleOnChangeName(event){
@@ -38,9 +43,10 @@ const Form = () => {
         <label>Email:</label>
         <input type="email" onChange={handleOnChangeEmail} value={inputEmail}/>
         <button type="submit">Send</button>
-        {error && isSubmit && <p>Please check your information again</p>}
-        {!error && isSubmit && <p>{`Thank you ${inputName} We will contact you as soon as ossible via email`}</p>}
+       
       </form>
+      {error ? <p>Please check your information again</p>: undefined}  
+      {(error ===false && isSubmit) ? <p>{`Thank you ${inputName} We will contact you as soon as possible via email`}</p>: undefined}        
     </div>
   );
 };
