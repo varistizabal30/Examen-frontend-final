@@ -18,6 +18,7 @@ function App() {
             <Route path="/detail" element={<Detail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/favs" element={<Favs />} />
+            <Route path="*" element={<div>Not found</div>} />
           </Routes>
         <Footer />
       </AppProvider>
