@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [data, setData] = useState({
-    dentist: [],
+    dentists: [],
     theme: "light"
   });
 
@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
     try {
         const data = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
         setData(data)
+        console.log(data);
     } catch (error) {
         console.log(error)
     }
@@ -22,7 +23,7 @@ export const AppProvider = ({ children }) => {
   }, []);
 
   const value = {
-    dentist: data,
+    dentists: data,
     theme: "light"
   };
 

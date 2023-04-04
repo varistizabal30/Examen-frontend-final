@@ -1,20 +1,8 @@
-import React from 'react';
+import React from "react";
 
-const columnas = ['Nombre', 'Email', 'Teléfono', 'Website'];
+const columnas = ["Name", "Email", "Phone", "Website"];
 
-function renderFila(data) {
-  return (
-    <tr>
-      <td>{data.nombre}</td>
-      <td>{data.email}</td>
-      <td>{data.telefono}</td>
-      <td>{data.website}</td>
-    </tr>
-  );
-}
-
-
-function Tabla(props) {
+function Table(props) {
   return (
     <table>
       <thead>
@@ -24,9 +12,16 @@ function Tabla(props) {
           ))}
         </tr>
       </thead>
-      <tbody>{props.map(renderFila)}</tbody>
+      <tbody>
+      <tr>
+            <td>{props.name}</td>
+            <td>{props.email}</td>
+            <td>{props.phone}</td>
+            <td>{props.website}</td>
+          </tr>
+      </tbody>
     </table>
   );
 }
 
-export default Tabla;
+export default Table;

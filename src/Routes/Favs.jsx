@@ -18,15 +18,14 @@ const Favs = () => {
       <div className="card-grid">
         {localData.length ? (
           localData.map((d) => (
-            <>
+            < div key={d.id}>
             <Card
-              key={d.id}
               id={d.id}
               name={d.name}
               username={d.username}
             ></Card>
             <button onClick={() => handleDelete(d.id)}>DeleteFav</button>
-            </>            
+            </div>            
           ))
         ) : (
           <p>Loading...</p>
