@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom'
 
 const Card = (dentist) => {
 
@@ -15,9 +15,10 @@ const Card = (dentist) => {
 
   return (
     <div className="card" key={dentist.id}>
-        <h3>{dentist.id}</h3>
+        <Link to={`dentist/${dentist.id}`}>
         <h3>{dentist.name}</h3>
-        <h3>{dentist.username}</h3>
+        <span>{dentist.username}</span>
+        </Link>
         <button onClick={addFav} className="favButton">Fav</button>
     </div>
   );
