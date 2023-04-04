@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
 
   async function getData(){
     try {
-        const data = await (await fetch("https://jsonplaceholder.typicode.com/users")).json()
+        const data = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
         setData(data)
     } catch (error) {
         console.log(error)
