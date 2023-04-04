@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import style from '../Styles/card.module.css'
+import image from "../img/pngwing.com.png"
 
 const Card = (dentist) => {
+  
+  const showDeleteButton = false;
 
   const addFav = ()=>{
     const localData = localStorage.getItem("favs") || "[]";
@@ -14,11 +18,11 @@ const Card = (dentist) => {
   }
 
   return (
-    <div className="card" key={dentist.id}>
-        <h3>{dentist.id}</h3>
-        <Link to={`/dentist/${dentist.id}`}>{dentist.name}</Link>
-        <h3>{dentist.username}</h3>
-        <button onClick={addFav} className="favButton">Fav</button>
+    <div className={style.card} key={dentist.id}>
+        <img src={image} alt="" />
+        <Link className={style.name} to={`/dentist/${dentist.id}`}>{dentist.name}</Link>
+        <h3 className={style.userName}>{dentist.username}</h3>
+        <button onClick={addFav} className={style.fav}>Fav</button>
     </div>
   );
 };

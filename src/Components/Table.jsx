@@ -1,14 +1,14 @@
 import React from "react";
 
-const columnas = ["Name", "Email", "Phone", "Website"];
+const columns = ["Name", "Email", "Phone", "Website"];
 
 function Table(props) {
   return (
     <table>
       <thead>
         <tr>
-          {columnas.map((columna) => (
-            <th key={columna}>{columna}</th>
+          {columns.map((column) => (
+            <th key={column}>{column}</th>
           ))}
         </tr>
       </thead>
