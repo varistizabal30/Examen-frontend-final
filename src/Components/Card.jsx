@@ -4,8 +4,6 @@ import style from '../Styles/card.module.css'
 import image from "../img/pngwing.com.png"
 
 const Card = (dentist) => {
-  
-  const showDeleteButton = false;
 
   const addFav = ()=>{
     const localData = localStorage.getItem("favs") || "[]";

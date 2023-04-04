@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+// import { AppContext } from '../Context/AppContext';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
+  // const [themeState, setThemeState] = useState(theme);
+  // const { dentists, theme } = useContext(AppContext);
+
+  
+  function handleOnClick(){
+
+
+  }
 
   return (
     <>

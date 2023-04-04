@@ -2,29 +2,37 @@ import { createContext, useState, useEffect } from "react";
 
 export const AppContext = createContext();
 
-export const AppProvider = ({ children }) => {
+export const AppProvider = ({ children, theme }) => {
   const [data, setData] = useState({
-    dentists: [],
-    theme: "light"
+    dentists: null,
+    theme: theme || "light" 
   });
+
 
   async function getData(){
     try {
-        const data = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
-        setData(data)
-        console.log(data);
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const dentists = await response.json();
+        setData((prevData) => ({...prevData, dentists, theme: theme || "ligth"}));
     } catch (error) {
         console.log(error)
     }
+
 } 
+
+function toggleTheme(){
+  setData({ ...data, theme: data.theme === 'light' ? 'dark' : 'light' });
+};
+
 
   useEffect(() => {
     getData()
   }, []);
 
   const value = {
-    dentists: data,
-    theme: "light"
+    dentists: data.dentists,
+    theme: data.theme,
+    // toggleTheme
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

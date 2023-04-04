@@ -32,7 +32,7 @@ const Dentist = () => {
       {data ? (
       <Table name={data.name} email={data.email} phone={data.phone} website={data.website}></Table>
       ) : (
-        <p>Cargando...</p>
+        <p>Loading...</p>
       )}
     </>
   );

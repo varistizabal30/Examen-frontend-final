@@ -7,11 +7,13 @@ import Favs from "./Routes/Favs";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { AppProvider } from "./Context/AppContext";
+import { useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState("ligth");
   return (
     <>
-      <AppProvider>
+      <AppProvider theme ={theme}>
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

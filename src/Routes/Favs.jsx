@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Components/Card";
-import style from '../Styles/home.module.css'
+import style from '../Styles/favs.module.css'
+import { FaTrashAlt } from "react-icons/fa";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -20,13 +21,13 @@ const Favs = () => {
       <div className={style.container}>
         {localData.length ? (
           localData.map((d) => (
-            < div key={d.id}>
+            <div key={d.id} className={style.cardContainer}>
+            <button onClick={() => handleDelete(d.id)} className={style.delete}><FaTrashAlt/></button>
             <Card
               id={d.id}
               name={d.name}
               username={d.username}
             ></Card>
-            <button onClick={() => handleDelete(d.id)}>DeleteFav</button>
             </div>            
           ))
         ) : (
