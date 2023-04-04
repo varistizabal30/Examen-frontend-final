@@ -8,7 +8,6 @@ const Navbar = () => {
   return (
     <>
       <Link to="./">Home</Link>
-      <Link to="./detail">Dentist</Link>
       <Link to="./contact">Contact</Link>
       <Link to="./favs">Favs</Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
