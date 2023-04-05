@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <main className={`${styles2[theme]}`}>
       <div className={styles2.titleContainer}>
-        <h2>Want to know more?</h2>
+        <h2 className={styles2.title}>Want to know more?</h2>
         <section>
           <p>Send us your questions and we will contact you</p>
           <Form />

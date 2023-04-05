@@ -21,8 +21,8 @@ const Favs = () => {
   return (
     <main className={`${styles2[theme]}`}>
       <div className={styles2.titleContainer}>
-        <p>Dentists Favs</p>
-        <section className={styles2.container}>
+        <p className={styles2.title}>Dentists Favs</p>
+        <section className={style.container}>
           {localData && localData.length ? (
             localData.map((d) => (
               <div key={d.id} className={style.cardContainer}>

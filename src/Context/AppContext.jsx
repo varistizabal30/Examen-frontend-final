@@ -23,7 +23,7 @@ export const AppProvider = ({ children }) => {
 function toggleTheme() {
     setData((prevData) => {
       const newTheme = prevData.theme === 'light' ? 'dark' : 'light';
-      //document.body.className = newTheme;
+      document.body.className = newTheme;
       return { ...prevData, theme: newTheme };
     });
   }

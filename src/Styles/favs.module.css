@@ -1,5 +1,27 @@
-
+.container{
+  display: flex;
+  justify-content: space-around;
+  width: 90vw;
+  height: auto;
+  flex-wrap:wrap;
+  margin-left: 2rem;
+  margin-top: 5px;  
+}
 .delete{
-  margin-left: 140px;
+  margin-left: 265px;
+  border: none;
+  background-color: rgb(214, 99, 99);
+  color: aliceblue;
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  border-radius: 2rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+.title{
+  font-size: 50px;
+  font-weight: 600;
+  margin: 50px;
 }
 

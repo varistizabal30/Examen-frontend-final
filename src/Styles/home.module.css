@@ -1,2 +1,10 @@
-
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  flex-wrap:wrap;
+  margin-left: 2rem;
+  margin-top: 5px;  
+}
 

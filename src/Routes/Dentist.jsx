@@ -32,7 +32,7 @@ const Dentist = () => {
   return (
     <main className={`${styles2[theme]}`}>
       <div className={styles2.titleContainer}>
-        <h1>Detail Dentist</h1>
+        <h1 className={styles2.title}>Detail Dentist</h1>
         <section className={styles.divTable}>
           {data ? (
             <Table
