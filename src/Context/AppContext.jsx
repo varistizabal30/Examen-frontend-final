@@ -13,16 +13,20 @@ export const AppProvider = ({ children }) => {
     try {
         const response = await fetch("https://jsonplaceholder.typicode.com/users");
         const dentists = await response.json();
-        setData((prevData) => ({...prevData, dentists, theme: "ligth"}));
+        setData((prevData) => ({...prevData, dentists, theme: data.theme}));
     } catch (error) {
         console.log(error)
     }
 
 } 
 
-function toggleTheme(){
-  setData({ ...data, theme: data.theme === 'light' ? 'dark' : 'light' });
-};
+function toggleTheme() {
+    setData((prevData) => {
+      const newTheme = prevData.theme === 'light' ? 'dark' : 'light';
+      document.body.className = newTheme;
+      return { ...prevData, theme: newTheme };
+    });
+  }
 
 
   useEffect(() => {

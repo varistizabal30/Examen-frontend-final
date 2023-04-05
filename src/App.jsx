@@ -6,16 +6,11 @@ import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import { AppContext } from "./Context/AppContext";
-import { useContext } from "react";
-import style from './Styles/app.module.css'
-
 
 
 function App() {
-  const { theme } = useContext(AppContext);
   return (
-    <div className={theme === "dark" ? style.dark : style.ligth}>
+    <div>
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
