@@ -3,7 +3,6 @@ import facebook from "../img/ico-facebook.png"
 import instagram from "../img/ico-instagram.png"
 import whatsapp from "../img/ico-whatsapp.png"
 import tiktok from "../img/ico-tiktok.png"
-import dh from "../img/DH.png"
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -16,7 +15,6 @@ const Footer = () => {
             <div className="container">
               <div className={`row`}>
                 <div className="col-sm-12 col-lg-6">
-                  <img className={`${styles.dhLogo}`} src={dh} alt='DH-logo' />
                 </div>
                 <div className={`col-sm-12 col-lg-6 ${styles.icons}`}>
                   <img src={facebook} alt="ícone do facebook" className={styles.icon} />
