@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../Styles/table.module.css";
 
 const columns = ["Name", "Email", "Phone", "Website"];
 

@@ -21,13 +21,16 @@
     transition: all 0.3s ease;
     border-style: none;
   }
+  .btnStyle:hover {
+    background: #619ea7;
+    color: #fafafd
+    }
   
   .container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 40px;
-    padding-top: 20px;
+    padding: 20px 40px 20px 0px;    
   }
   
   ul {

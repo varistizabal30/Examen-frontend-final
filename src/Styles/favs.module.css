@@ -1,13 +1,13 @@
 .container{
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  width: 90vw;
+  height: auto;
+  flex-wrap:wrap;
+  margin-left: 2rem;
+  margin-top: 5px;  
 }
 .delete{
   margin-left: 140px;
 }
-.cardContainer{
- 
-  
-  
-}
+

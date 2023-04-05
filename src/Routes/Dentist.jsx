@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { AppContext } from "../Context/AppContext";
 import { useParams } from "react-router-dom";
 import Table from "../Components/Table";
+import styles from "../Styles/table.module.css";
+import styles2 from "../Styles/app.module.css";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Dentist = () => {
+  const { theme } = useContext(AppContext);
   const [data, setData] = useState();
   const param = useParams();
 
@@ -23,17 +27,25 @@ const Dentist = () => {
     searchDentist();
   }, []);
 
-
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
   return (
-    <main>
-      <h1>Detail Dentist</h1>
-      {data ? (
-      <Table name={data.name} email={data.email} phone={data.phone} website={data.website}></Table>
-      ) : (
-        <p>Loading...</p>
-      )}
+    <main className={`${styles2[theme]}`}>
+      <div className={styles2.titleContainer}>
+        <h1>Detail Dentist</h1>
+        <section className={styles.divTable}>
+          {data ? (
+            <Table
+              name={data.name}
+              email={data.email}
+              phone={data.phone}
+              website={data.website}
+            ></Table>
+          ) : (
+            <p>Loading...</p>
+          )}
+        </section>
+      </div>
     </main>
   );
 };

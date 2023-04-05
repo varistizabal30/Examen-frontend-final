@@ -20,7 +20,7 @@ const Card = (dentist) => {
         <img src={image} alt="" />
         <Link className={style.name} to={`/dentist/${dentist.id}`}>{dentist.name}</Link>
         <h3 className={style.userName}>{dentist.username}</h3>
-        <button onClick={addFav} className={style.fav}>Fav</button>
+        <button onClick={addFav} className={style.fav}>Add Fav</button>
     </div>
   );
 };

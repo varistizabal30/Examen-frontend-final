@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import styles from "../Styles/form.module.css";
 
 const Form = () => {
     const [inputName, setName] = useState("")
@@ -16,8 +17,7 @@ const Form = () => {
             return;
         }
         setError(false);
-        setSubmit(true);
-      
+        setSubmit(true);      
     }
 
     function handleOnChangeName(event){
@@ -33,14 +33,17 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
-        <input type="text"  onChange={handleOnChangeName} value={inputName}/>
+        <input type="text" placeholder="Enter your name" onChange={handleOnChangeName} value={inputName}/>
         <label>Email:</label>
-        <input type="text" onChange={handleOnChangeEmail} value={inputEmail}/>
-        <button type="submit">Send</button>
+        <input type="text" placeholder="Enter your email" onChange={handleOnChangeEmail} value={inputEmail}/>
+        <button type="submit" className={styles.send}>Send</button>
        
       </form>
-      {error ? <p>Please check your information again</p>: undefined}  
-      {(!error && submit) ? <p>{`Thank you ${inputName} We will contact you as soon as possible via email`}</p>: undefined}    
+      <div>
+      {error ? <p className={styles.msj}>Please check your information again</p>: undefined}  
+      {(!error && submit) ? <p className={styles.msj}>{`Thank you ${inputName} we will contact you as soon as possible via email`}</p>: undefined}   
+      </div>
+      
     </div>
   );
 };
