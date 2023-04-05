@@ -19,7 +19,7 @@ const Favs = () => {
     <>
       <h1>Dentists Favs</h1>
       <div className={style.container}>
-        {localData.length ? (
+        {localData && localData.length ? (
           localData.map((d) => (
             <div key={d.id} className={style.cardContainer}>
             <button onClick={() => handleDelete(d.id)} className={style.delete}><FaTrashAlt/></button>

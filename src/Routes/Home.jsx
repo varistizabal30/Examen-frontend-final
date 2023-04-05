@@ -6,12 +6,12 @@ import style from '../Styles/home.module.css'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { dentists, theme } = useContext(AppContext);
+  const { dentists, theme, toggleTheme } = useContext(AppContext);
   console.log(dentists);
   return (
     <main>
       <div className={style.container}>
-        {dentists.length ? (
+        {dentists && dentists.length ? (
           dentists.map((d) => (
             <Card
               key={d.id}

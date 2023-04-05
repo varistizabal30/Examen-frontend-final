@@ -6,14 +6,16 @@ import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import { AppProvider } from "./Context/AppContext";
-import { useState } from "react";
+import { AppContext } from "./Context/AppContext";
+import { useContext } from "react";
+import style from './Styles/app.module.css'
+
+
 
 function App() {
-  const [theme, setTheme] = useState("ligth");
+  const { theme } = useContext(AppContext);
   return (
-    <>
-      <AppProvider theme ={theme}>
+    <div className={theme === "dark" ? style.dark : style.ligth}>
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -23,8 +25,7 @@ function App() {
             <Route path="*" element={<div>Not found</div>} />
           </Routes>
         <Footer />
-      </AppProvider>
-    </>
+    </div>
   );
 }
 

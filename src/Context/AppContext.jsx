@@ -2,10 +2,10 @@ import { createContext, useState, useEffect } from "react";
 
 export const AppContext = createContext();
 
-export const AppProvider = ({ children, theme }) => {
+export const AppProvider = ({ children }) => {
   const [data, setData] = useState({
     dentists: null,
-    theme: theme || "light" 
+    theme: "light" 
   });
 
 
@@ -13,7 +13,7 @@ export const AppProvider = ({ children, theme }) => {
     try {
         const response = await fetch("https://jsonplaceholder.typicode.com/users");
         const dentists = await response.json();
-        setData((prevData) => ({...prevData, dentists, theme: theme || "ligth"}));
+        setData((prevData) => ({...prevData, dentists, theme: "ligth"}));
     } catch (error) {
         console.log(error)
     }
@@ -32,7 +32,7 @@ function toggleTheme(){
   const value = {
     dentists: data.dentists,
     theme: data.theme,
-    // toggleTheme
+    toggleTheme
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
