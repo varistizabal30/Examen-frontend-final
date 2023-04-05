@@ -7,7 +7,6 @@ import style from '../Styles/home.module.css'
 
 const Home = () => {
   const { dentists, theme, toggleTheme } = useContext(AppContext);
-  console.log(dentists);
   return (
     <main>
       <div className={style.container}>

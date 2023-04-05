@@ -16,7 +16,7 @@ const Favs = () => {
       setfavsState(newLocalData);
     }
   return (
-    <>
+    <main>
       <h1>Dentists Favs</h1>
       <div className={style.container}>
         {localData && localData.length ? (
@@ -34,7 +34,7 @@ const Favs = () => {
           <p>Loading...</p>
         )}
       </div>
-    </>
+    </main>
   );
 };
 

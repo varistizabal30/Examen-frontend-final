@@ -1,11 +1,7 @@
-.navbarBrand {
-    font-size: 30px;
+
+  .navBar{
+    gap: 60px;
   }
-  
-  .navbarBrand::first-letter {
-    color: #f21d1d;
-  }
-  
   .navBarLink {
     text-decoration: none;
     padding: 10px;
@@ -16,15 +12,22 @@
   }
   
   .btnStyle {
-    width: 3rem;
-    height: 3rem;
+    width: 70px;
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+    background: #b7c8d3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-style: none;
   }
   
   .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 40px;
+    padding-top: 20px;
   }
   
   ul {
@@ -33,3 +36,4 @@
     list-style-type: none;
     margin: 0;
   }
+

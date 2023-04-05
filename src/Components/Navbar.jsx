@@ -7,26 +7,26 @@ const Navbar = () => {
   const { toggleTheme } = useContext(AppContext);
 
   return (
-    <div className="container">
-      <ul className="navbar-nav mb-2 mb-sm-0" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <li className={`nav-item ${styles.navBarLink}`}>
+    <div className={styles.container}>
+      <ul className={styles.navBar}>
+        <li className={styles.navBarLink}>
           <Link to="./" className="nav-link">
             Home
           </Link>
         </li>
-        <li className={`nav-item ${styles.navBarLink}`}>
+        <li className={styles.navBarLink}>
           <Link to="./contact" className="nav-link">
             Contact
           </Link>
         </li>
-        <li className={`nav-item ${styles.navBarLink}`}>
+        <li className={styles.navBarLink}>
           <Link to="./favs" className="nav-link">
             Favs
           </Link>
         </li>
-        <li className={`nav-item`}>
+        <li>
           <button onClick={toggleTheme} className={`btn btn-light ${styles.btnStyle}`}>
-            ☀ 🌙{" "}
+            ☀ 🌙
           </button>
         </li>
       </ul>

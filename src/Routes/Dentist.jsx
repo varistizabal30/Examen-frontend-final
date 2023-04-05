@@ -27,14 +27,14 @@ const Dentist = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
   return (
-    <>
+    <main>
       <h1>Detail Dentist</h1>
       {data ? (
       <Table name={data.name} email={data.email} phone={data.phone} website={data.website}></Table>
       ) : (
         <p>Loading...</p>
       )}
-    </>
+    </main>
   );
 };
 
