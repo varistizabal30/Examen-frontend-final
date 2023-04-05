@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "../Styles/table.module.css"
 
 const columns = ["Name", "Email", "Phone", "Website"];
 
 function Table(props) {
   return (
-    <table>
+    <table  className={styles}>
       <thead>
         <tr>
           {columns.map((column) => (
