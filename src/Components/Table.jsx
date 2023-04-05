@@ -5,7 +5,7 @@ const columns = ["Name", "Email", "Phone", "Website"];
 
 function Table(props) {
   return (
-    <table>
+    <table  className={styles}>
       <thead>
         <tr>
           {columns.map((column) => (

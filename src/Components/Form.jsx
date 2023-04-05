@@ -17,7 +17,8 @@ const Form = () => {
             return;
         }
         setError(false);
-        setSubmit(true);      
+        setSubmit(true);
+      
     }
 
     function handleOnChangeName(event){
