@@ -20,12 +20,13 @@
     cursor: pointer;
     transition: all 0.3s ease;
     border-style: none;
+    border-radius: 20px;
   }
   .btnStyle:hover {
     background: #619ea7;
     color: #fafafd
     }
-  
+
   .container {
     display: flex;
     align-items: center;

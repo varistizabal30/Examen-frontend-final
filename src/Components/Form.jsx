@@ -38,7 +38,6 @@ const Form = () => {
         <label>Email:</label>
         <input type="text" placeholder="Enter your email" onChange={handleOnChangeEmail} value={inputEmail}/>
         <button type="submit" className={styles.send}>Send</button>
-       
       </form>
       <div>
       {error ? <p className={styles.msj}>Please check your information again</p>: undefined}  

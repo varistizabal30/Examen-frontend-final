@@ -26,7 +26,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <button onClick={toggleTheme} className={`btn btn-light ${styles.btnStyle}`}>
+          <button onClick={toggleTheme} className={styles.btnStyle}>
             ☀ 🌙
           </button>
         </li>
