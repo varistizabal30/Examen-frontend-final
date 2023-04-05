@@ -4,7 +4,7 @@ import { AppContext } from "../Context/AppContext";
 import styles from "../Styles/navbar.module.css";
 
 const Navbar = () => {
-  const { toggleTheme } = useContext(AppContext);
+  const { theme, toggleTheme } = useContext(AppContext);
 
   return (
     <div className="container">
@@ -26,7 +26,7 @@ const Navbar = () => {
         </li>
         <li className={`nav-item`}>
           <button onClick={toggleTheme} className={`btn btn-light ${styles.btnStyle}`}>
-            ☀ 🌙{" "}
+            {theme === "dark"? " 🌙 ": " ☀ "}
           </button>
         </li>
       </ul>
