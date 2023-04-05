@@ -5,7 +5,7 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [data, setData] = useState({
     dentists: null,
-    theme: "light" 
+    theme: 'light' 
   });
 
 
@@ -13,7 +13,7 @@ export const AppProvider = ({ children }) => {
     try {
         const response = await fetch("https://jsonplaceholder.typicode.com/users");
         const dentists = await response.json();
-        setData((prevData) => ({...prevData, dentists, theme: "ligth"}));
+        setData({ ...data, dentists});
     } catch (error) {
         console.log(error)
     }
@@ -21,11 +21,12 @@ export const AppProvider = ({ children }) => {
 } 
 
 function toggleTheme(){
-  setData({ ...data, theme: data.theme === 'light' ? 'dark' : 'light' });
+  setData({ ...data, theme: data.theme === 'light' ? 'dark' : 'light'});  
 };
 
 
   useEffect(() => {
+    console.log("entre useEffect");
     getData()
   }, []);
 
