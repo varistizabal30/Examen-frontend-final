@@ -2,16 +2,6 @@
   margin-top: auto;
 }
 
-.top {
-  text-transform: uppercase;
-  padding: 1rem;
-  background: #f21d1d;
-  border: none;
-  color: white;
-  margin-top: 2rem;
-  width: 100%;
-}
-
 .footer {
   padding: 2rem 0;
 }
@@ -22,10 +12,6 @@
   align-items: flex-start;
   gap: 1rem;
   filter: brightness(0);
-}
-
-.iconsDark{
-  filter: brightness(0) invert(1);
 }
 
 

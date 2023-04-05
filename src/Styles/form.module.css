@@ -1,0 +1,22 @@
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .inputSpacing {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  button.btn-primary {
+    background-color: blue;
+    border-color: blue;
+  }
+  

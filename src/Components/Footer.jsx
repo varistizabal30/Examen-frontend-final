@@ -14,9 +14,7 @@ const Footer = () => {
           <div className={`navbar-light bg-light} ${styles.footer}`}>
             <div className="container">
               <div className={`row`}>
-                <div className="col-sm-12 col-lg-6">
-                </div>
-                <div className={`col-sm-12 col-lg-6 ${styles.icons}`}>
+                <div className={`col-sm-12 col-lg-6 ${styles.icons} `}>
                   <img src={facebook} alt="ícone do facebook" className={styles.icon} />
                   <img src={instagram} alt="ícone do instagram" className={styles.icon} />
                   <img src={whatsapp} alt="ícone do whatsapp" className={styles.icon} />
