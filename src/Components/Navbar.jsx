@@ -8,6 +8,7 @@ const Navbar = () => {
   const { toggleTheme, theme } = useContext(AppContext);
 
   return (
+    <div className={styles.po}>
     <div className={ `${styles.container} ${styles2[theme]}`} >
       <ul className={styles2.navBar}>
         <li className={styles2.navBarLink}>
@@ -31,6 +32,7 @@ const Navbar = () => {
           </button>
         </li>
       </ul>
+    </div>
     </div>
   );
 };

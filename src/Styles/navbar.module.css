@@ -19,9 +19,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 20px 40px 20px 0px;  
-    border-bottom: 2px solid rgb(115, 166, 179); /* agregar un borde inferior de 1px de ancho */
-    box-shadow: 0 10px 20px rgb(115, 166, 179), 0 6px 12px rgb(115, 166, 179); /* agregar una sombra en la parte inferior */
+    padding: 5px 15px 5px 0px;
+    border-bottom: 1px solid rgb(115, 166, 179); /* agregar un borde inferior de 1px de ancho */
+    box-shadow: 0 2px 8px rgb(115, 166, 179); /* agregar una sombra en la parte inferior */
   }
   
   ul {
@@ -29,5 +29,15 @@
     flex-direction: row;
     list-style-type: none;
     margin: 0;
+  }
+  .po{
+    position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  }
+
+  main {
+    margin-top: 50px;
   }
 
