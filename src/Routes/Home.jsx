@@ -18,6 +18,7 @@ const Home = () => {
               id={d.id}
               name={d.name}
               username={d.username}
+              isDisable={false}
             ></Card>
           ))
         ) : (
