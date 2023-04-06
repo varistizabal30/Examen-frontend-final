@@ -32,7 +32,7 @@ const Favs = () => {
                 >
                   <FaTrashAlt />
                 </button>
-                <Card id={d.id} name={d.name} username={d.username}></Card>
+                <Card id={d.id} name={d.name} username={d.username} isDisable={true}></Card>
               </div>
             ))
           ) : (
