@@ -87,9 +87,9 @@ color: #fcfcfc
 
 .icons {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
   gap: 1rem;
+
 
   /* filter: brightness(0.1); */
 }

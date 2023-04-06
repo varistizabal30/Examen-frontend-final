@@ -14,13 +14,18 @@ const Footer = () => {
 
   return (
     <main className={`${styles2[theme]}`}>
-    <footer className={ `${styles2.icons} ${styles.footer}`}>
-      
-      <img src={facebook} alt="ícone do facebook" className={styles.icon} />
-      <img src={instagram} alt="ícone do instagram" className={styles.icon} />
-      <img src={whatsapp} alt="ícone do whatsapp" className={styles.icon} />
-      <img src={tiktok} alt="ícone do tiktok" className={styles.icon} />
-    </footer>
+      <footer className={styles.footer}>
+        <div className={styles2.icons}>
+          <img src={facebook} alt="ícone do facebook" className={styles.icon} />
+          <img
+            src={instagram}
+            alt="ícone do instagram"
+            className={styles.icon}
+          />
+          <img src={whatsapp} alt="ícone do whatsapp" className={styles.icon} />
+          <img src={tiktok} alt="ícone do tiktok" className={styles.icon} />
+        </div>
+      </footer>
     </main>
   );
 };
