@@ -28,7 +28,7 @@ const Navbar = () => {
         </li>
         <li>
           <button onClick={toggleTheme} className={styles.btnStyle}>
-            ☀ 🌙
+            {theme==="dark"? "🌙" : "☀"}
           </button>
         </li>
       </ul>
