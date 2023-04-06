@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <main className={`${styles2[theme]}`}>
-    <footer className={ `${styles.icons} ${styles.footer}`}>
+    <footer className={ `${styles2.icons} ${styles.footer}`}>
       
       <img src={facebook} alt="ícone do facebook" className={styles.icon} />
       <img src={instagram} alt="ícone do instagram" className={styles.icon} />

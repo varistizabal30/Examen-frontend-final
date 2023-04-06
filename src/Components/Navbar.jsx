@@ -9,19 +9,19 @@ const Navbar = () => {
 
   return (
     <div className={ `${styles.container} ${styles2[theme]}`} >
-      <ul className={styles.navBar}>
-        <li className={styles.navBarLink}>
-          <Link to="./" className="nav-link">
+      <ul className={styles2.navBar}>
+        <li className={styles2.navBarLink}>
+          <Link to="./" >
             Home
           </Link>
         </li>
-        <li className={styles.navBarLink}>
-          <Link to="./contact" className="nav-link">
+        <li className={styles2.navBarLink}>
+          <Link to="./contact" >
             Contact
           </Link>
         </li>
-        <li className={styles.navBarLink}>
-          <Link to="./favs" className="nav-link">
+        <li className={styles2.navBarLink}>
+          <Link to="./favs">
             Favs
           </Link>
         </li>

@@ -12,7 +12,7 @@ const Contact = () => {
       <div className={styles2.titleContainer}>
         <h2 className={styles2.title}>Want to know more?</h2>
         <section>
-          <p>Send us your questions and we will contact you</p>
+          <p className={styles2.textContact}>Send us your questions and we will contact you</p>
           <Form />
         </section>
       </div>

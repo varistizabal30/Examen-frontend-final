@@ -1,16 +1,4 @@
 
-  .navBar{
-    gap: 60px;
-  }
-  .navBarLink {
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 9px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    font-weight: 700;
-  }
-  
   .btnStyle {
     width: 70px;
     text-align: center;

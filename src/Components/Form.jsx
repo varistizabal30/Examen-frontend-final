@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import styles from "../Styles/form.module.css";
+import styles2 from "../Styles/app.module.css";
+
 
 const Form = () => {
     const [inputName, setName] = useState("")
@@ -37,11 +39,11 @@ const Form = () => {
         <input type="text" placeholder="Enter your name" onChange={handleOnChangeName} value={inputName}/>
         <label>Email:</label>
         <input type="text" placeholder="Enter your email" onChange={handleOnChangeEmail} value={inputEmail}/>
-        <button type="submit" className={styles.send}>Send</button>
+        <button type="submit" className={styles2.fav}>Send</button>
       </form>
       <div>
-      {error ? <p className={styles.msj}>Please check your information again</p>: undefined}  
-      {(!error && submit) ? <p className={styles.msj}>{`Thank you ${inputName} we will contact you as soon as possible via email`}</p>: undefined}   
+      {error ? <p className={styles.msg}>***Please check your information again***</p>: undefined}  
+      {(!error && submit) ? <p className={styles.msg}>{`***Thank you ${inputName} we will contact you as soon as possible via email***`}</p>: undefined}   
       </div>
       
     </div>

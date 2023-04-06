@@ -15,24 +15,15 @@
 img{
   padding-top: 10px;
 }
-.fav{
-    background: rgba(136, 136, 136, 0.116);
-    padding: 10px;
-    border: 1px;
-    width: 50%;
-    cursor: pointer;
-    border-radius: 2rem;
-  }
 
-.fav:hover {
-  background: #fff;
-  color: #4433ff
-}
 .name{
   margin-top: 5px;
   font-size: 20px;
   color: #345d99;
   font-weight: 750;
+}
+.name:hover{
+  color: rgb(0, 183, 255);
 }
 .userName{
   font-weight: 500;

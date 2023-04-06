@@ -4,14 +4,13 @@
   padding: 0;
 }
 
-#root.dark {
-  background-color: #2A3B47; 
-  color: #f1eded; 
-}
-
 body {
   margin: 0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: lighter;
   padding: 0;
 }
+body.dark {
+  background-color: #2A3B47; 
+}
+

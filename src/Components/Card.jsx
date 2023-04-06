@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import style from '../Styles/card.module.css'
+import style2 from '../Styles/app.module.css'
 import image from "../img/pngwing.com.png"
 
 const Card = (dentist) => {
@@ -20,7 +21,7 @@ const Card = (dentist) => {
         <img src={image} alt="" />
         <Link className={style.name} to={`/dentist/${dentist.id}`}>{dentist.name}</Link>
         <h3 className={style.userName}>{dentist.username}</h3>
-        <button onClick={addFav} className={style.fav}>Add Fav</button>
+        <button onClick={addFav} className={style2.fav}>Add Fav</button>
     </div>
   );
 };

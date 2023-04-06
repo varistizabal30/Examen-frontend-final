@@ -1,10 +1,20 @@
-
-
 .dark{
   background-color: #2A3B47; 
   color: #f1eded; 
 }
 
+.dark a{
+  color: white;
+}
+
+
+.dark .fav{
+  background: #afc209;
+}
+
+.dark.icons {
+  filter: none;
+}
 
 .light{
   background-color: white;
@@ -23,22 +33,63 @@
 }
 
 .App{
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #1a1a20;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
+
+a:hover{
+  color: #212E36;
 }
+
 .title{
   font-size: 50px;
   font-weight: 600;
   margin: 50px;
+}
+.textContact{
+  font-size: 20px;
+  text-align: center;
+}
+
+.navBarLink {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 9px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+.navBar{
+  gap: 60px;
+}
+
+.fav{
+  background: #aec4c7;
+  padding: 10px;
+  border: 1px;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fav:hover {
+background: #5a6f72;
+color: #fcfcfc
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+  filter: brightness(0.1);
 }
 
