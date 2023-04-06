@@ -7,12 +7,11 @@
   color: white;
 }
 
-
 .dark .fav{
   background: #afc209;
 }
 
-.dark.icons {
+.dark .icons {
   filter: none;
 }
 
@@ -44,7 +43,7 @@ a {
 }
 
 a:hover{
-  color: #212E36;
+  color: rgb(115, 166, 179);
 }
 
 .title{
@@ -81,7 +80,7 @@ a:hover{
 }
 
 .fav:hover {
-background: #5a6f72;
+background: #aab1b3;
 color: #fcfcfc
 }
 

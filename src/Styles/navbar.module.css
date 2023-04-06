@@ -19,7 +19,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 20px 40px 20px 0px;    
+    padding: 20px 40px 20px 0px;  
+    border-bottom: 2px solid rgb(115, 166, 179); /* agregar un borde inferior de 1px de ancho */
+    box-shadow: 0 10px 20px rgb(115, 166, 179), 0 6px 12px rgb(115, 166, 179); /* agregar una sombra en la parte inferior */
   }
   
   ul {
